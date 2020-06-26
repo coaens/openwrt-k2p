@@ -71,7 +71,7 @@ jobs:
         uses: P3TERX/debugger-action@master
         if: env.SSH_ACTIONS == 'true'
 
-      - name: Generate Configuration_Redmi_AC2100
+      - name: Generate Configuration_K2P
         env:
           CONFIG_FILE: 'k2p.config'
         run: |
