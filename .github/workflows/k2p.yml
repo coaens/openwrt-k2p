@@ -101,17 +101,17 @@ jobs:
       - name: Prepare artifact
         run: find ./lede/bin/targets/ -type d -name "packages" | xargs rm -rf {}
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: OpenWrt_K2P_Targets
+          path: ./lede/bin/targets/
+
       - name: Upload Packages
         uses: actions/upload-artifact@master
         with:
           name: OpenWrt_K2P_Packages
           path: ./lede/bin/packages/
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: OpenWrt_K2P
-          path: ./lede/bin/targets/
 
       - name: Create release
         if: github.event == 'push'
