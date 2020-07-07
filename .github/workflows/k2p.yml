@@ -13,8 +13,10 @@ on:
 #  push:
 #    branches: 
 #      - master
-  watch:
-    types: started
+#  watch:
+#    types: started
+  issues:
+    types: edited
 
 env:
  SSH_ACTIONS: false
