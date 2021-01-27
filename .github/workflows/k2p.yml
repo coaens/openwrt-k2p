@@ -19,7 +19,6 @@ on:
     types: closed
 
 env:
- SSH_ACTIONS: false
  TZ: Asia/Shanghai
 
 jobs:
